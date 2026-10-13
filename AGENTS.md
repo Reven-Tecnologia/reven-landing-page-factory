@@ -6,10 +6,11 @@ Antes de criar uma página de cliente:
 
 1. Leia o briefing, o plano e as evidências do lead. Se produto, público, oferta, CTA ou destino do formulário estiverem indefinidos, registre a lacuna e mantenha a página como rascunho.
 2. Separe fatos verificados, hipóteses e placeholders. Nunca invente prova social, resultados, certificações, preços, escassez ou claims de saúde/finanças.
-3. Quando a direção visual se beneficiar de pesquisa externa, use seletivamente `docs/REFERENCE_SOURCES.md` (ou outras fontes pertinentes) e registre padrões úteis com URL e data em `docs/REFERENCE_LOG_TEMPLATE.md`. Essa etapa é opcional; não replique uma página existente.
-4. Crie uma direção visual específica para o produto e público. A página demo deste repositório não é uma identidade fixa para clientes.
-5. Faça QA em desktop e mobile, incluindo fluxo de CTA, teclado, contraste, imagens, metadados, velocidade e eventual formulário. Documente limites do teste.
-6. Não publique, conecte analytics, envie dados reais ou faça contato externo sem autorização específica.
+3. Depois do briefing e antes do código, explore direções visuais distintas que façam sentido para o produto, público, posicionamento e ativos disponíveis. Registre as alternativas consideradas, seus motivos e riscos, a direção escolhida e por que ela venceu. Não adote o primeiro estilo encontrado por padrão.
+4. Use referências do cliente como ponto de partida. Quando pesquisa externa ajudar a decidir, consulte seletivamente `docs/REFERENCE_SOURCES.md` (ou outras fontes pertinentes) e registre páginas específicas, padrões úteis, URL e data em `docs/REFERENCE_LOG_TEMPLATE.md`. Não replique uma página existente.
+5. Conecte tipografia, composição, imagens e ritmo à mensagem e ao negócio. Não use arte abstrata ou padrões decorativos apenas por serem fáceis de implementar. A página demo deste repositório não é uma identidade fixa para clientes.
+6. Faça QA em desktop e mobile, incluindo crítica visual da página renderizada contra a direção escolhida, fluxo de CTA, teclado, contraste, imagens, metadados, velocidade e eventual formulário. Documente limites do teste.
+7. Não publique, conecte analytics, envie dados reais ou faça contato externo sem autorização específica.
 
 Use `.agents/skills/landing-page-cro/SKILL.md` para planejar a comunicação. Antes de concluir alterações de interface, execute `npm run build`, `npm run lint` e `npm test`, e inspecione o resultado no navegador. Atualize documentação e testes quando mudar o fluxo.
 

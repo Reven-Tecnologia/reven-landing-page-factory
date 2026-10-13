@@ -7,6 +7,10 @@ export default defineConfig({
   use: {
     baseURL: "http://127.0.0.1:3000",
     trace: "retain-on-failure",
+    channel:
+      process.env.PLAYWRIGHT_BROWSER_CHANNEL === "msedge"
+        ? "msedge"
+        : undefined,
   },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"] } },

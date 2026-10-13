@@ -17,6 +17,8 @@
 
 - [ ] Revisão real em viewport mobile estreito, tablet e desktop; sem overflow horizontal
 - [ ] Hierarquia, tipografia, espaçamento, contraste, recortes e alinhamento inspecionados visualmente
+- [ ] Capturas desktop e mobile comparadas com a direção escolhida; diferenças e ajustes registrados
+- [ ] Imagens, gráficos e decoração têm função clara; a página demonstra algo específico da oferta e evita copy intercambiável e repetição mecânica de seções
 - [ ] Imagens têm licença, dimensões adequadas e texto alternativo quando informativas
 - [ ] Interações funcionam por teclado; foco visível; movimento respeita preferência reduzida
 - [ ] Estados de hover, foco, carregamento, erro e sucesso checados quando aplicáveis
@@ -31,6 +33,8 @@
 - [ ] Sem credenciais ou dados pessoais no repositório, capturas ou logs
 
 ## Pendências e aceite
+
+- Crítica visual: o que comunica bem, o que ainda parece genérico e quais ajustes foram feitos:
 
 | Item | Evidência | Gravidade | Responsável | Resolução |
 | --- | --- | --- | --- | --- |

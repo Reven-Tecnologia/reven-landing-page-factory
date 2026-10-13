@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Manrope } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -7,29 +7,21 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   display: "swap",
 });
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Landing pages com intenção | Reven",
+  title: "Landing pages para ofertas que precisam ser entendidas | Reven",
   description:
-    "Uma demonstração do processo manual da Reven para planejar, construir e revisar landing pages com clareza, identidade e foco em conversão.",
+    "A Reven planeja, desenha e desenvolve landing pages a partir da oferta, do público e do próximo passo que a página precisa facilitar. Demonstração em rascunho.",
   robots: { index: false, follow: false },
 };
 
-export const viewport: Viewport = { themeColor: "#101e28" };
+export const viewport: Viewport = { themeColor: "#f4f0e8" };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${dmSans.variable} ${manrope.variable}`}>
-        {children}
-      </body>
+      <body className={dmSans.variable}>{children}</body>
     </html>
   );
 }

@@ -1,222 +1,236 @@
+const email = process.env.CONTACT_EMAIL;
+const contactHref = email
+  ? `mailto:${email}?subject=Projeto%20de%20landing%20page`
+  : "#contato";
+
+function Arrow() {
+  return <span aria-hidden="true">↗</span>;
+}
+
 export default function Home() {
   return (
     <>
       <a className="skip-link" href="#conteudo">
         Pular para o conteúdo
       </a>
-      <header className="site-header">
-        <div className="shell header-inner">
-          <a className="wordmark" href="#inicio">
-            <span className="wordmark-symbol" aria-hidden="true">
+      <header className="site-header" id="inicio">
+        <div className="wrap header-row">
+          <a
+            className="brand"
+            href="#inicio"
+            aria-label="Reven, voltar ao início"
+          >
+            <span className="brand-mark" aria-hidden="true">
               R<span>.</span>
             </span>
-            <span>REVEN</span>
+            <span className="brand-name">REVEN</span>
           </a>
           <nav aria-label="Navegação principal">
-            <a href="#metodo">Método</a>
-            <a href="#entrega">Entrega</a>
-            <a className="nav-cta" href="#processo">
-              Ver processo <span aria-hidden="true">↗</span>
+            <a href="#exemplo">A página</a>
+            <a href="#decisoes">Como pensamos</a>
+            <a className="header-contact" href="#contato">
+              Contato <Arrow />
             </a>
           </nav>
         </div>
       </header>
 
       <main id="conteudo">
-        <section className="hero" id="inicio" aria-labelledby="hero-title">
-          <div className="shell hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow">
-                <span className="eyebrow-line"></span> Laboratório de landing
-                pages
+        <section className="hero" aria-labelledby="hero-title">
+          <div className="wrap hero-inner">
+            <div className="hero-kicker">
+              <span className="red-dot" /> LANDING PAGES / ESTRATÉGIA + DESIGN +
+              CÓDIGO
+            </div>
+            <h1 id="hero-title">
+              Sua oferta precisa
+              <br />
+              ser <em>entendida.</em>
+            </h1>
+            <div className="hero-bottom">
+              <p>
+                Planejamos, desenhamos e desenvolvemos landing pages a partir do
+                que seu público precisa saber para dar o próximo passo.
               </p>
-              <h1 id="hero-title">
-                Uma boa página não começa pelo <em>layout.</em>
-              </h1>
-              <p className="hero-lede">
-                Começa por entender o negócio, a pessoa do outro lado e a
-                decisão que precisa acontecer. Depois, cada palavra e cada pixel
-                ganham uma função.
-              </p>
-              <a className="button button-primary" href="#processo">
-                Conheça nosso processo <span aria-hidden="true">↗</span>
+              <a className="text-link hero-link" href={contactHref}>
+                Conversar sobre uma página <Arrow />
               </a>
-              <p className="hero-note">
-                Uma demonstração do método manual da Reven — não uma promessa de
-                resultados.
+            </div>
+            <div className="hero-index" aria-hidden="true">
+              <span>REVEN — ESTÚDIO DIGITAL</span>
+              <span>DESÇA PARA VER COMO PENSAMOS ↓</span>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="showcase"
+          id="exemplo"
+          aria-labelledby="example-title"
+        >
+          <div className="wrap showcase-top">
+            <p className="section-label">01 / PÁGINA EM ABERTO</p>
+            <div>
+              <h2 id="example-title">
+                Uma página começa com perguntas melhores.
+              </h2>
+              <p className="section-intro">
+                Antes de escolher cores e componentes, precisamos decidir o que
+                merece aparecer, o que comprova a mensagem e qual ação faz
+                sentido pedir.
               </p>
             </div>
-            <div className="hero-art" aria-hidden="true">
-              <div className="art-frame">
-                <div className="art-top">
-                  <span>01 / INTENÇÃO</span>
-                  <span>REVEN®</span>
+          </div>
+
+          <div
+            className="wrap page-study"
+            aria-label="Demonstração conceitual da estrutura de uma landing page"
+          >
+            <div className="study-topline">
+              <span>ESTUDO DE ESTRUTURA / NÃO É UM PROJETO DE CLIENTE</span>
+              <span>REVEN — 01</span>
+            </div>
+            <div className="study-layout">
+              <div className="study-rail">
+                <span className="rail-title">ANOTAÇÕES</span>
+                <span className="rail-note rail-note-one">
+                  <b>01</b> Dizer para quem é e o que está sendo oferecido.
+                </span>
+                <span className="rail-note rail-note-two">
+                  <b>02</b> Colocar a evidência perto da afirmação.
+                </span>
+                <span className="rail-note rail-note-three">
+                  <b>03</b> Pedir uma ação concreta e possível.
+                </span>
+              </div>
+              <div className="page-sample">
+                <div className="sample-nav">
+                  <span>MARCA / EXEMPLO</span>
+                  <span>MENU&nbsp; &nbsp; CONTATO ↗</span>
                 </div>
-                <div className="art-orbit orbit-one"></div>
-                <div className="art-orbit orbit-two"></div>
-                <div className="art-orbit orbit-three"></div>
-                <div className="art-center">
-                  <span className="art-cross">✳</span>
-                  <span>
-                    IDEIA
-                    <br />→<br />
-                    AÇÃO
+                <div className="sample-hero">
+                  <p>OFERTA / VISÃO GERAL</p>
+                  <h3>Uma proposta clara muda toda a página.</h3>
+                  <div className="sample-line" />
+                  <div className="sample-line short" />
+                  <span className="sample-button">
+                    AÇÃO PRINCIPAL <Arrow />
                   </span>
                 </div>
-                <div className="art-bottom">
-                  <span>ESTRATÉGIA</span>
-                  <span>DESIGN</span>
-                  <span>VALIDAÇÃO</span>
+                <div className="sample-proof">
+                  <span>O QUE É</span>
+                  <span>POR QUE CONFIAR</span>
+                  <span>PRÓXIMO PASSO</span>
+                </div>
+                <div className="sample-body">
+                  <div>
+                    <span className="sample-number">01</span>
+                    <strong>Contexto antes da promessa.</strong>
+                    <p>Conteúdo que responde à dúvida real de quem chegou.</p>
+                  </div>
+                  <div>
+                    <span className="sample-number">02</span>
+                    <strong>Prova perto da decisão.</strong>
+                    <p>Afirmações apoiadas no que pode ser demonstrado.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="hero-rail" aria-hidden="true">
-            <div className="shell">
-              <span>ESTRATÉGIA ANTES DA ESTÉTICA</span>
-              <span>✳</span>
-              <span>CLAREZA ANTES DO CLIQUE</span>
-              <span>✳</span>
-              <span>QUALIDADE ATÉ O ÚLTIMO PIXEL</span>
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="section intro"
-          id="metodo"
-          aria-labelledby="metodo-title"
-        >
-          <div className="shell intro-grid">
-            <div>
-              <p className="section-number">01 / O PRINCÍPIO</p>
-              <h2 id="metodo-title">
-                Menos fórmula.
-                <br />
-                <em>Mais contexto.</em>
-              </h2>
-            </div>
-            <div className="intro-copy">
+            <div className="study-caption">
+              <span>ESTRUTURA ILUSTRATIVA</span>
               <p>
-                Uma landing page não é uma coleção de blocos bonitos. É uma
-                conversa desenhada para ajudar alguém a entender uma oferta e
-                decidir o próximo passo.
-              </p>
-              <p>
-                Por isso, investigamos antes de escrever, estruturamos antes de
-                desenhar e testamos antes de considerar a página pronta.
+                O projeto real parte de uma oferta, de pessoas e de evidências
+                reais. Este desenho mostra o tipo de decisão que molda a página.
               </p>
             </div>
           </div>
         </section>
 
         <section
-          className="section method"
-          id="processo"
-          aria-labelledby="processo-title"
+          className="decisions"
+          id="decisoes"
+          aria-labelledby="decisions-title"
         >
-          <div className="shell">
-            <div className="section-heading">
-              <div>
-                <p className="section-number">02 / COMO TRABALHAMOS</p>
-                <h2 id="processo-title">Do insight à página.</h2>
-              </div>
-              <p>
-                Um processo simples o bastante para começar manualmente.
-                Rigoroso o bastante para não pular o que importa.
-              </p>
+          <div className="wrap decisions-grid">
+            <div className="decisions-heading">
+              <p className="section-label">02 / O QUE DEFINIMOS</p>
+              <h2 id="decisions-title">O desenho vem depois da decisão.</h2>
             </div>
-            <div className="steps">
-              <article className="step">
-                <span className="step-index">01</span>
+            <div className="decision-list">
+              <article>
+                <span>01</span>
                 <div>
-                  <h3>Entender</h3>
+                  <h3>O que dizer</h3>
                   <p>
-                    Produto, público, oferta, objeções e evidências reais. O
-                    briefing define o que podemos afirmar e o que ainda precisa
-                    ser validado.
+                    Do briefing saem a proposta de valor, a objeção principal e
+                    uma ordem de conteúdo que acompanha a decisão do visitante.
                   </p>
                 </div>
-                <span className="step-icon" aria-hidden="true">
-                  ↗
-                </span>
               </article>
-              <article className="step">
-                <span className="step-index">02</span>
+              <article>
+                <span>02</span>
                 <div>
-                  <h3>Dar forma</h3>
+                  <h3>O que mostrar</h3>
                   <p>
-                    Mensagem, direção visual e fluxo de conversão. O design
-                    nasce do contexto — não de um template que apenas troca
-                    cores.
+                    Exploramos composições, tipografia e imagens adequadas ao
+                    público. A direção escolhida precisa ajudar a mostrar a
+                    oferta.
                   </p>
                 </div>
-                <span className="step-icon" aria-hidden="true">
-                  ↗
-                </span>
               </article>
-              <article className="step">
-                <span className="step-index">03</span>
+              <article>
+                <span>03</span>
                 <div>
-                  <h3>Verificar</h3>
+                  <h3>Como funcionar</h3>
                   <p>
-                    Testes reais em desktop e mobile, revisão de acessibilidade,
-                    performance, SEO e funcionamento do caminho até a ação.
+                    Implementamos a página e conferimos desktop, mobile,
+                    teclado, velocidade e o caminho até o contato.
                   </p>
                 </div>
-                <span className="step-icon" aria-hidden="true">
-                  ↗
-                </span>
               </article>
             </div>
           </div>
         </section>
 
         <section
-          className="section delivery"
-          id="entrega"
-          aria-labelledby="entrega-title"
+          className="contact"
+          id="contato"
+          aria-labelledby="contact-title"
         >
-          <div className="shell delivery-grid">
-            <div>
-              <p className="section-number">03 / O PADRÃO</p>
-              <h2 id="entrega-title">
-                Bonita no primeiro olhar.
-                <br />
-                <em>Boa até o último clique.</em>
-              </h2>
-            </div>
-            <div className="delivery-list">
+          <div className="wrap contact-inner">
+            <p className="section-label">03 / PRÓXIMO PASSO</p>
+            <h2 id="contact-title">
+              Sua oferta tem uma história.
+              <br />
+              <em>Vamos desenhar a página?</em>
+            </h2>
+            <div className="contact-bottom">
               <p>
-                <span aria-hidden="true">✳</span> Texto que esclarece, sem
-                promessas inventadas.
+                Conte o que você vende, para quem e qual ação espera da página.
+                A conversa começa por aí.
               </p>
-              <p>
-                <span aria-hidden="true">✳</span> Experiência confortável em
-                qualquer tela.
-              </p>
-              <p>
-                <span aria-hidden="true">✳</span> Acessibilidade e velocidade
-                como parte do design.
-              </p>
-              <p>
-                <span aria-hidden="true">✳</span> Uma ação principal clara — e
-                verificável.
-              </p>
+              {email ? (
+                <a className="contact-button" href={contactHref}>
+                  Escrever para a Reven <Arrow />
+                </a>
+              ) : (
+                <p className="contact-pending">
+                  Canal de contato em definição. Esta página permanece em
+                  rascunho.
+                </p>
+              )}
             </div>
           </div>
         </section>
       </main>
 
       <footer className="site-footer">
-        <div className="shell footer-inner">
-          <div>
-            <span className="footer-mark">
-              R<span>.</span>
-            </span>
-            <p>Landing pages com intenção.</p>
-          </div>
-          <span>REVEN / DEMONSTRAÇÃO INTERNA</span>
+        <div className="wrap footer-inner">
+          <a className="footer-brand" href="#inicio">
+            REVEN<span>.</span>
+          </a>
+          <span>DEMONSTRAÇÃO / NÃO PUBLICADA</span>
+          <a href="#inicio">Voltar ao início ↑</a>
         </div>
       </footer>
     </>

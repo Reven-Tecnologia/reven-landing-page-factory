@@ -4,7 +4,7 @@ Base **manual** para pesquisar, planejar, criar e revisar landing pages de oport
 
 ## O que há aqui
 
-- Uma página demonstrativa da própria Reven, feita em Next.js (App Router). Ela comprova o fluxo de construção e QA; **não é uma página de cliente nem uma identidade visual oficial**.
+- Uma nova página demonstrativa da própria Reven, feita em Next.js (App Router). Ela testa o fluxo de direção de arte e QA; **não é uma página de cliente nem uma identidade visual oficial**. O [briefing](docs/REVEN_REDESIGN_BRIEF.md), as [alternativas de direção](docs/REVEN_REDESIGN_PLAN.md) e as [referências](docs/REVEN_REDESIGN_REFERENCES.md) documentam este experimento.
 - A demonstração traz `noindex` de propósito; páginas reais só recebem metadados definitivos após aprovação de domínio e conteúdo.
 - [Briefing](docs/BRIEF_TEMPLATE.md), [registro de referências](docs/REFERENCE_LOG_TEMPLATE.md), [plano da página](docs/PAGE_PLAN_TEMPLATE.md) e [checklist de QA](docs/QA_CHECKLIST.md) reutilizáveis. O [catálogo de fontes](docs/REFERENCE_SOURCES.md) é opcional.
 - Testes locais de fluxo, responsividade e acessibilidade. Nenhum teste envia formulário ou publica conteúdo.
@@ -14,10 +14,10 @@ Base **manual** para pesquisar, planejar, criar e revisar landing pages de oport
 
 1. Copie os modelos pertinentes de `docs/` para uma pasta de trabalho do lead (fora do repositório se houver dados pessoais). Identifique fonte, data, evidências e lacunas.
 2. Confirme produto, público, oferta, CTA e destino dos dados com o responsável. Sem isso, trabalhe em rascunho; não conecte um formulário real.
-3. Se ajudar a definir a direção visual, consulte algumas fontes do [catálogo opcional](docs/REFERENCE_SOURCES.md) e registre **padrões** e URLs no [modelo de referências](docs/REFERENCE_LOG_TEMPLATE.md). Não é necessário visitar todos os sites; não copie layouts ou ativos protegidos.
-4. Defina mensagem, ordem das seções, direção visual, prova disponível e eventos de conversão em `PAGE_PLAN_TEMPLATE.md`.
+3. Após o briefing, explore direções visuais distintas adequadas ao cliente. Comece pelos materiais da marca; se pesquisa externa ajudar, consulte fontes do [catálogo opcional](docs/REFERENCE_SOURCES.md) e registre páginas específicas, **padrões** e URLs no [modelo de referências](docs/REFERENCE_LOG_TEMPLATE.md). Não copie layouts ou ativos protegidos.
+4. Defina mensagem, ordem das seções, alternativas visuais consideradas, direção escolhida e motivo da escolha, prova disponível e eventos de conversão em `PAGE_PLAN_TEMPLATE.md`.
 5. Implemente a página. Use a demonstração como referência técnica, não como molde visual obrigatório.
-6. Rode os comandos abaixo e complete `QA_CHECKLIST.md` com evidências de desktop e mobile. Revise a página no navegador.
+6. Rode os comandos abaixo e complete `QA_CHECKLIST.md` com evidências de desktop e mobile. Revise a página no navegador e critique o resultado frente à direção escolhida.
 7. Peça aprovação humana de texto, fatos, dados, domínio, analytics e destino do formulário antes de publicar.
 
 ## Rodar localmente
@@ -40,10 +40,13 @@ npm test
 
 Os testes iniciam o servidor local. Uma captura desktop e mobile fica em `test-results/` quando os testes rodam. A pasta não é versionada.
 
+Se o Chromium do Playwright não estiver disponível e o Microsoft Edge já estiver instalado, execute os testes com `PLAYWRIGHT_BROWSER_CHANNEL=msedge` no ambiente. O teste usa o navegador instalado sem alterar o destino do CTA.
+
 ## Regras de produção
 
 - Fatos, depoimentos, números, logos e resultados só entram com fonte e autorização registrados.
-- O CTA deve ter um destino funcional e explicitamente aprovado. O botão da demonstração leva apenas à seção de processo.
+- O CTA deve ter um destino funcional e explicitamente aprovado.
+- No experimento da Reven, configure `CONTACT_EMAIL` em `.env.local` a partir de `.env.example`. O endereço real não deve ser versionado. O CTA abre o cliente de email; o teste não envia mensagens.
 - Não use dados pessoais ou de leads no código, nos testes, no Git ou em capturas públicas.
 - A entrega exige revisão visual, responsividade, acessibilidade, performance, SEO e o fluxo completo da conversão — não apenas build verde.
 - Automação será tratada em etapa futura, após o processo manual estar validado.
