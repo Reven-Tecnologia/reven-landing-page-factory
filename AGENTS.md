@@ -1,0 +1,24 @@
+# Instruções para agentes
+
+Este repositório é a base **manual** de produção de landing pages da Reven. O projeto `reven-lp-template-pv1` mantém o planejamento da operação mais ampla. Não acople os dois nem implemente prospecção, orquestração, envio de mensagens, CRM ou publicação automática sem pedido explícito.
+
+Antes de criar uma página de cliente:
+
+1. Leia o briefing, o plano e as evidências do lead. Se produto, público, oferta, CTA ou destino do formulário estiverem indefinidos, registre a lacuna e mantenha a página como rascunho.
+2. Separe fatos verificados, hipóteses e placeholders. Nunca invente prova social, resultados, certificações, preços, escassez ou claims de saúde/finanças.
+3. Pesquise referências visuais atuais e registre padrões úteis com fonte e data. Não replique uma página existente.
+4. Crie uma direção visual específica para o produto e público. A página demo deste repositório não é uma identidade fixa para clientes.
+5. Faça QA em desktop e mobile, incluindo fluxo de CTA, teclado, contraste, imagens, metadados, velocidade e eventual formulário. Documente limites do teste.
+6. Não publique, conecte analytics, envie dados reais ou faça contato externo sem autorização específica.
+
+Use `.agents/skills/landing-page-cro/SKILL.md` para planejar a comunicação. Antes de concluir alterações de interface, execute `npm run build`, `npm run lint` e `npm test`, e inspecione o resultado no navegador. Atualize documentação e testes quando mudar o fluxo.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
