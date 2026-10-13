@@ -6,7 +6,7 @@ Antes de criar uma página de cliente:
 
 1. Leia o briefing, o plano e as evidências do lead. Se produto, público, oferta, CTA ou destino do formulário estiverem indefinidos, registre a lacuna e mantenha a página como rascunho.
 2. Separe fatos verificados, hipóteses e placeholders. Nunca invente prova social, resultados, certificações, preços, escassez ou claims de saúde/finanças.
-3. Pesquise referências visuais atuais e registre padrões úteis com fonte e data. Não replique uma página existente.
+3. Quando a direção visual se beneficiar de pesquisa externa, use seletivamente `docs/REFERENCE_SOURCES.md` (ou outras fontes pertinentes) e registre padrões úteis com URL e data em `docs/REFERENCE_LOG_TEMPLATE.md`. Essa etapa é opcional; não replique uma página existente.
 4. Crie uma direção visual específica para o produto e público. A página demo deste repositório não é uma identidade fixa para clientes.
 5. Faça QA em desktop e mobile, incluindo fluxo de CTA, teclado, contraste, imagens, metadados, velocidade e eventual formulário. Documente limites do teste.
 6. Não publique, conecte analytics, envie dados reais ou faça contato externo sem autorização específica.

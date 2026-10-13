@@ -19,7 +19,7 @@ Reúna produto/serviço, público e contexto, problema, oferta, ação desejada,
 
 ## Entregáveis antes do código
 
-Preencha `docs/BRIEF_TEMPLATE.md`, `docs/REFERENCE_LOG_TEMPLATE.md` e `docs/PAGE_PLAN_TEMPLATE.md` (ou cópias por lead). Inclua: proposta de valor, mapa de seções, rascunho de copy, prova com fonte, direção visual, evento de conversão e questões em aberto. Não coloque dados pessoais no repositório.
+Preencha `docs/BRIEF_TEMPLATE.md` e `docs/PAGE_PLAN_TEMPLATE.md` (ou cópias por lead). Inclua: proposta de valor, mapa de seções, rascunho de copy, prova com fonte, direção visual, evento de conversão e questões em aberto. Se pesquisar referências visuais, consulte seletivamente `docs/REFERENCE_SOURCES.md` e registre URLs, datas e padrões no `docs/REFERENCE_LOG_TEMPLATE.md`; a pesquisa não é obrigatória quando já há direção de marca suficiente. Não coloque dados pessoais no repositório.
 
 ## Revisão
 

@@ -6,15 +6,15 @@ Base **manual** para pesquisar, planejar, criar e revisar landing pages de oport
 
 - Uma página demonstrativa da própria Reven, feita em Next.js (App Router). Ela comprova o fluxo de construção e QA; **não é uma página de cliente nem uma identidade visual oficial**.
 - A demonstração traz `noindex` de propósito; páginas reais só recebem metadados definitivos após aprovação de domínio e conteúdo.
-- [Briefing](docs/BRIEF_TEMPLATE.md), [registro de referências](docs/REFERENCE_LOG_TEMPLATE.md), [plano da página](docs/PAGE_PLAN_TEMPLATE.md) e [checklist de QA](docs/QA_CHECKLIST.md) reutilizáveis.
+- [Briefing](docs/BRIEF_TEMPLATE.md), [registro de referências](docs/REFERENCE_LOG_TEMPLATE.md), [plano da página](docs/PAGE_PLAN_TEMPLATE.md) e [checklist de QA](docs/QA_CHECKLIST.md) reutilizáveis. O [catálogo de fontes](docs/REFERENCE_SOURCES.md) é opcional.
 - Testes locais de fluxo, responsividade e acessibilidade. Nenhum teste envia formulário ou publica conteúdo.
 - Uma [skill do projeto](.agents/skills/landing-page-cro/SKILL.md) para orientar estratégia de conversão sem inventar provas ou promessas.
 
 ## Fluxo manual por lead
 
-1. Copie os quatro modelos de `docs/` para uma pasta de trabalho do lead (fora do repositório se houver dados pessoais). Identifique fonte, data, evidências e lacunas.
+1. Copie os modelos pertinentes de `docs/` para uma pasta de trabalho do lead (fora do repositório se houver dados pessoais). Identifique fonte, data, evidências e lacunas.
 2. Confirme produto, público, oferta, CTA e destino dos dados com o responsável. Sem isso, trabalhe em rascunho; não conecte um formulário real.
-3. Pesquise referências e registre **padrões** e fontes, sem copiar layout ou ativos protegidos.
+3. Se ajudar a definir a direção visual, consulte algumas fontes do [catálogo opcional](docs/REFERENCE_SOURCES.md) e registre **padrões** e URLs no [modelo de referências](docs/REFERENCE_LOG_TEMPLATE.md). Não é necessário visitar todos os sites; não copie layouts ou ativos protegidos.
 4. Defina mensagem, ordem das seções, direção visual, prova disponível e eventos de conversão em `PAGE_PLAN_TEMPLATE.md`.
 5. Implemente a página. Use a demonstração como referência técnica, não como molde visual obrigatório.
 6. Rode os comandos abaixo e complete `QA_CHECKLIST.md` com evidências de desktop e mobile. Revise a página no navegador.

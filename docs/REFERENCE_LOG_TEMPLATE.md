@@ -1,6 +1,6 @@
 # Referências visuais — [ID interno do lead]
 
-Pesquise referências atuais no mesmo contexto de produto/público e em contextos adjacentes. Registre **padrões observados**, não uma lista de páginas a copiar.
+Este registro é **opcional**. Use-o quando referências externas ajudarem a decidir a direção visual; comece pelo produto, público e materiais de marca. O [catálogo de fontes](REFERENCE_SOURCES.md) oferece pontos de partida, não uma lista obrigatória. Registre **padrões observados**, não páginas a copiar.
 
 | Fonte / URL | Acesso em | Padrão útil (hierarquia, copy, layout, interação) | Adaptação para esta página | O que evitar |
 | --- | --- | --- | --- | --- |
