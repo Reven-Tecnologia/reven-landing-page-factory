@@ -45,6 +45,10 @@ Escolha: **A, editorial de consulta**, incorporando apenas a precisão de legend
 
 ## Pendências
 
+### Revisão da direção pelo usuário
+
+Em 13/10/2026, o usuário preferiu a expressão visual e a maioria dos títulos da versão anterior. A direção passa a ser **editorial de identidade**, recuperando o retrato em arco, a assinatura tipográfica e os títulos poéticos já aprovados. Preservar clareza factual no texto de apoio, o CTA de consulta de horários, a contextualização de um único caso, as fotos originais e o mapa automático. Critério: CRO orienta hierarquia e fluxo, sem substituir a identidade visual por texto literal em todos os títulos. Esta preferência explícita do usuário prevalece sobre a escolha anterior da skill.
+
 Confirmar identificação completa do conselho, autorização de fotos, sala e condições da avaliação; revisar copy com a profissional; aprovar domínio e configuração de conteúdo antes de deploy. Isso não impede a transformação local autorizada.
 
 ## Ajuste solicitado — qualidade e mapa

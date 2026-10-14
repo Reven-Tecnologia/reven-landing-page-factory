@@ -2,10 +2,12 @@
 import { useRef, useState } from "react";
 export function Header({
   name,
+  initials,
   profession,
   contact,
 }: {
   name: string;
+  initials: string;
   profession: string;
   contact: string;
 }) {
@@ -23,9 +25,14 @@ export function Header({
       }}
     >
       <div className="container header-inner">
-        <a className="brand" href="#inicio">
-          <span>{name}</span>
-          <small>{profession}</small>
+        <a className="header-brand" href="#inicio">
+          <span className="monogram" aria-hidden="true">
+            {initials}
+          </span>
+          <span className="brand">
+            <span>{name}</span>
+            <small>{profession} · Harmonização facial e corporal</small>
+          </span>
         </a>
         <button
           className="menu-toggle"

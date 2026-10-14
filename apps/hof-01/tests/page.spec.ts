@@ -15,7 +15,10 @@ test("serviço, CTA e destinos são claros, sem enviar contato", async ({
   );
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-    "Harmonização facial e corporal.",
+    "Sua beleza, com a sua essência.",
+  );
+  await expect(page.locator(".hero-subtitle")).toContainText(
+    "Harmonização facial e corporal",
   );
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
     "content",

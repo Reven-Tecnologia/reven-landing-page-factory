@@ -115,6 +115,7 @@ export default async function Page() {
       </a>
       <Header
         name={content.name}
+        initials={content.initials}
         profession={content.profession}
         contact={contact}
       />
@@ -122,41 +123,44 @@ export default async function Page() {
         <section className="hero container" aria-labelledby="title">
           <div className="hero-copy">
             <p className="eyebrow">
-              {content.city} <span aria-hidden="true">/</span> Atendimento com
-              avaliação
+              {content.profession} <span aria-hidden="true">/</span>{" "}
+              {content.city}
             </p>
             <h1 id="title">
-              <span>Harmonização</span>{" "}
+              <span>Sua beleza,</span> <span>com a sua</span>{" "}
               <span>
-                facial <em>e corporal.</em>
+                <em>essência.</em>
               </span>
             </h1>
             <p className="hero-subtitle">
-              Avaliação individual
-              <br />
-              com {content.name}.
-            </p>
-            <p className="hero-description">
-              Conte o que deseja cuidar. A avaliação é o primeiro passo para
-              discutir os procedimentos, suas possibilidades e seus limites.
+              Harmonização facial e corporal com avaliação individual em{" "}
+              {content.city}.
             </p>
             <Contact href={contact} />
             <p className="contact-detail">
               Horários e condições da avaliação na conversa.
             </p>
             <a className="text-link hero-link" href="#caso">
-              Examinar o caso apresentado <span aria-hidden="true">↓</span>
+              Conheça os resultados <span aria-hidden="true">↓</span>
             </a>
           </div>
           <figure className="hero-portrait">
-            <Image
-              src={content.portrait.src}
-              alt={content.portrait.alt}
-              width={content.portrait.width}
-              height={content.portrait.height}
-              sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1100px) 46vw, 560px"
-              preload
-            />
+            <div className="portrait-frame">
+              <Image
+                src={content.portrait.src}
+                alt={content.portrait.alt}
+                width={content.portrait.width}
+                height={content.portrait.height}
+                sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1100px) 46vw, 560px"
+                preload
+              />
+            </div>
+            <div className="portrait-signature">
+              <small>Um olhar que valoriza você</small>
+              <span>
+                Ciência, anatomia <i>&amp;</i> arte.
+              </span>
+            </div>
             <figcaption>
               <span>{content.name}</span>
               <span>{content.registration}</span>
@@ -173,9 +177,9 @@ export default async function Page() {
             <div>
               <p className="eyebrow">Facial · pele · corporal</p>
               <h2 id="care-title">
-                Áreas de
+                Cada detalhe.
                 <br />
-                <em>atendimento.</em>
+                <em>Uma intenção.</em>
               </h2>
             </div>
             <p>
@@ -223,7 +227,7 @@ export default async function Page() {
                 <h2 id="case-title">
                   Um caso.
                   <br />
-                  <em>Seis registros.</em>
+                  <em>Muitos detalhes.</em>
                 </h2>
               </div>
               <p>
@@ -267,9 +271,9 @@ export default async function Page() {
           <div className="professional-copy" data-reveal>
             <p className="eyebrow">A profissional</p>
             <h2 id="professional-title">
-              Quem conduz
+              Técnica e sensibilidade.
               <br />
-              <em>sua avaliação.</em>
+              <em>Um olhar só seu.</em>
             </h2>
             <p className="professional-name">{content.name}</p>
             <p>
@@ -307,9 +311,9 @@ export default async function Page() {
             <div data-reveal>
               <p className="eyebrow">Antes do primeiro contato</p>
               <h2 id="faq-title">
-                Antes de
+                Um pouco
                 <br />
-                <em>agendar.</em>
+                <em>mais de clareza.</em>
               </h2>
               <p>
                 O que vale saber para começar a conversa e preparar a visita.
@@ -338,7 +342,7 @@ export default async function Page() {
           <div className="location-copy" data-reveal>
             <p className="eyebrow">Endereço e agendamento</p>
             <h2 id="location-title">
-              Sua avaliação
+              Esperamos você
               <br />
               <em>em {content.city.split(",")[0]}.</em>
             </h2>
@@ -368,6 +372,21 @@ export default async function Page() {
             </div>
           </div>
           <ClinicMap src={content.mapsEmbed} name={content.addressName} />
+        </section>
+        <section className="closing" aria-labelledby="closing-title">
+          <div className="container closing-inner" data-reveal>
+            <p className="eyebrow">Sua beleza tem uma história</p>
+            <h2 id="closing-title">
+              O próximo capítulo
+              <br />
+              <em>começa com você.</em>
+            </h2>
+            <p>
+              Converse sobre sua avaliação facial ou corporal em {content.city}{" "}
+              e consulte os horários disponíveis.
+            </p>
+            <Contact href={contact} />
+          </div>
         </section>
       </main>
       <footer className="footer">

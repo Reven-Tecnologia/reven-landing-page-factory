@@ -83,9 +83,9 @@ export function Gallery({ views }: { views: CaseView[] }) {
       <div className="case-selection">
         <p className="eyebrow">Estudo de caso</p>
         <h3>
-          Selecione
+          Cada ângulo conta
           <br />
-          <em>um ângulo.</em>
+          <em>parte da história.</em>
         </h3>
         <p>
           Selecione uma vista para examinar os registros. A comparação já faz

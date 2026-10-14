@@ -1236,3 +1236,285 @@ address span {
     transition: none !important;
   }
 }
+
+/* Identidade editorial aprovada: retrato em arco e títulos expressivos. */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-width: 0;
+}
+.header-brand .brand > span {
+  font-size: 20px;
+}
+.header-brand .brand > small {
+  font-size: 8px;
+  letter-spacing: 0.06em;
+}
+.monogram {
+  font-family: var(--serif);
+  font-size: 39px;
+  line-height: 1;
+  letter-spacing: -0.11em;
+  color: var(--gold);
+  padding-right: 5px;
+}
+.hero {
+  grid-template-columns: 1fr 0.94fr;
+  gap: 70px;
+  padding-top: 54px;
+}
+.hero h1 {
+  font-size: clamp(62px, 6.5vw, 88px);
+  line-height: 1.05;
+}
+.hero-copy .eyebrow {
+  margin-bottom: 26px;
+}
+.hero-subtitle {
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 365px;
+  color: var(--muted);
+  margin: 26px 0 27px;
+}
+.hero-portrait {
+  position: relative;
+  align-self: center;
+  margin-right: 20px;
+}
+.portrait-frame {
+  border-radius: 260px 260px 4px 4px;
+  overflow: hidden;
+  background: var(--champagne);
+}
+.portrait-frame > img {
+  width: 100%;
+  height: 615px;
+  object-fit: cover;
+  object-position: 52% 30%;
+}
+.portrait-signature {
+  position: absolute;
+  left: -40px;
+  bottom: 80px;
+  background: var(--plum);
+  color: var(--paper);
+  padding: 23px 30px;
+  box-shadow: 0 12px 24px #4c2d4012;
+}
+.portrait-signature > small {
+  display: block;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: #e6d9c1;
+}
+.portrait-signature > span {
+  display: block;
+  font: 23px/1.6 var(--serif);
+}
+.portrait-signature i {
+  color: #d3bc94;
+}
+.professional h2 {
+  font-size: clamp(35px, 3.5vw, 47px);
+}
+.case-selection > h3 {
+  font-size: 34px;
+}
+.closing {
+  background: var(--plum);
+  color: var(--paper);
+  padding: 78px 0 84px;
+  text-align: center;
+}
+.closing-inner {
+  max-width: 750px;
+}
+.closing .eyebrow {
+  color: #ded0b4;
+}
+.closing h2 {
+  font-size: clamp(40px, 4.8vw, 65px);
+}
+.closing em {
+  color: #d3bc94;
+}
+.closing p:not(.eyebrow) {
+  font-size: 14px;
+  color: #e4d9de;
+  max-width: 430px;
+  margin: 25px auto 28px;
+}
+.closing .button {
+  background: var(--paper);
+  color: var(--plum);
+  border-color: var(--paper);
+}
+.closing .button:hover {
+  background: var(--champagne);
+}
+@media (max-width: 1100px) {
+  .hero {
+    gap: 48px;
+  }
+  .portrait-frame > img {
+    height: 590px;
+  }
+  .portrait-signature {
+    left: -24px;
+    padding: 20px 24px;
+  }
+  .portrait-signature > span {
+    font-size: 21px;
+  }
+  .header-brand {
+    gap: 13px;
+  }
+  .header-brand .brand > span {
+    font-size: 18px;
+  }
+  .header-brand .brand > small {
+    font-size: 7px;
+  }
+}
+@media (max-width: 900px) {
+  .header-inner {
+    gap: 20px;
+  }
+  .hero {
+    gap: 38px;
+  }
+  .hero h1 {
+    font-size: 58px;
+  }
+  .hero-subtitle {
+    font-size: 14px;
+  }
+  .portrait-frame > img {
+    height: 550px;
+  }
+  .portrait-signature {
+    left: -20px;
+    bottom: 70px;
+    padding: 16px 19px;
+  }
+  .portrait-signature > span {
+    font-size: 17px;
+  }
+  .portrait-signature > small {
+    font-size: 6px;
+  }
+  .case-selection > h3 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 720px) {
+  .header-inner {
+    gap: 15px;
+  }
+  .header-brand {
+    gap: 12px;
+  }
+  .monogram {
+    font-size: 34px;
+  }
+  .header-brand .brand > span {
+    font-size: 18px;
+  }
+  .header-brand .brand > small {
+    font-size: 6px;
+    max-width: 190px;
+    line-height: 1.5;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-top: 33px;
+  }
+  .hero h1 {
+    font-size: clamp(54px, 13.8vw, 78px);
+  }
+  .hero-copy .eyebrow {
+    font-size: 9px;
+    margin-bottom: 22px;
+  }
+  .hero-subtitle {
+    font-size: 14px;
+    max-width: 315px;
+    margin: 22px 0 24px;
+  }
+  .hero-portrait {
+    margin: 0 12px 0 10px;
+  }
+  .portrait-frame {
+    border-radius: 200px 200px 4px 4px;
+  }
+  .portrait-frame > img {
+    height: 470px;
+    object-position: 50% 24%;
+  }
+  .portrait-signature {
+    left: -10px;
+    bottom: 62px;
+    padding: 19px 21px;
+  }
+  .portrait-signature > small {
+    font-size: 7px;
+  }
+  .portrait-signature > span {
+    font-size: 21px;
+  }
+  .hero-portrait figcaption {
+    font-size: 9px;
+  }
+  .case-selection > h3 {
+    font-size: 29px;
+  }
+  .professional h2 {
+    font-size: 36px;
+  }
+  .closing {
+    padding: 62px 0 66px;
+  }
+  .closing h2 {
+    font-size: 42px;
+  }
+  .closing p:not(.eyebrow) {
+    font-size: 13px;
+  }
+  .closing .button {
+    font-size: 12px;
+  }
+}
+@media (max-width: 360px) {
+  .header-brand {
+    gap: 9px;
+  }
+  .header-brand .brand > span {
+    font-size: 16px;
+  }
+  .header-brand .brand > small {
+    font-size: 5.5px;
+    max-width: 160px;
+  }
+  .monogram {
+    font-size: 30px;
+  }
+  .header-inner {
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 52px;
+  }
+  .portrait-frame > img {
+    height: 420px;
+  }
+  .portrait-signature > span {
+    font-size: 18px;
+  }
+  .closing h2 {
+    font-size: 36px;
+  }
+}
