@@ -1,6 +1,16 @@
 # Plano da página — HOF-01
 
-Versão 3, 13/10/2026. Implementação autorizada; conteúdo clínico e publicação aguardam revisão profissional.
+Versão 4, 13/10/2026. Implementação local autorizada; conteúdo clínico e publicação aguardam revisão profissional.
+
+## Direção atual — restauração integral da versão aprovada
+
+O usuário escolheu recuperar a página anterior inteira e mudar somente a stack para Next.js. Sua preferência substitui a direção CRO abaixo e a recuperação parcial do hero. O HTML, as duas folhas de estilo e as interações da versão anterior, guardados em `sites/luana-macedo/dist/` no workspace de origem, são a referência para a composição completa. Essa fonte tinha retrato em arco, contorno facial, assinatura sobre a foto, títulos editoriais, tratamentos em linhas, galeria ameixa de um caso com seis vistas, apresentação da profissional, três passos, FAQ, mapa, fechamento e WhatsApp flutuante.
+
+O resultado usa Next.js App Router para página, conteúdo e metadados. O markup aprovado foi convertido em template com campos de identidade, contatos, localização e imagens preenchidos apenas pelo JSON local ou variável de ambiente. O script de interações original foi mantido como asset cliente. A mudança de stack não altera os textos nem a hierarquia visual aprovada. As únicas correções funcionais mantidas dos pedidos seguintes são JPEGs originais, retrato lossless, mapa automático e contraste dos textos pequenos na seção dos passos.
+
+CTA principal: “Agende sua avaliação”, abrindo o WhatsApp com mensagem pré-preenchida. O clique inicia a conversa; disponibilidade e agendamento são combinados nela. Publicação, indexação e aprovação dos registros de pacientes permanecem pendentes.
+
+## Histórico da transformação CRO, substituído pela escolha do usuário
 
 Frase estratégica: para quem considera cuidado estético facial ou corporal na região, apresentar uma avaliação individual com uma profissional identificada e registros reais do trabalho, permitindo consultar horários e condições pelo WhatsApp.
 

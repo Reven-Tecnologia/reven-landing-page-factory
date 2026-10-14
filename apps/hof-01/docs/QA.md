@@ -1,4 +1,18 @@
-# QA — HOF-01, versão Next/CRO
+# QA — HOF-01, versão Next fiel ao site aprovado
+
+## Estado atual — restauração integral, 13/10/2026
+
+O pedido final foi recuperar a versão anterior inteira e alterar somente a stack. A composição renderizada no Next usa o HTML, CSS e comportamento daquela versão como fonte, com campos de identidade preenchidos pela configuração local. As correções de qualidade de imagem e mapa feitas depois da primeira versão foram preservadas.
+
+- Build Next e lint aprovados. Oito testes Playwright em Edge, desktop e mobile, aprovados: composição e CTA, galeria/modal/gestos, mapa automático/menu e reflow/acessibilidade.
+- Capturas completas inspecionadas em 1440px e 390px: `artifacts/qa/original-next-desktop.png` e `original-next-mobile.png`. As seções e os títulos originais estão presentes. Mapa real visível em `location-actual.png`.
+- Navegador de produção local: retrato natural 1086×1448; seis fotos clínicas naturais 1080×1080; largura do documento sem overflow nos dois tamanhos inspecionados. Todos os arquivos estão servidos diretamente, sem recompressão do Next.
+- O mapa é um iframe presente no HTML e carregado ao aproximar a seção; no Edge local, apareceu com o marcador do endereço. O WhatsApp foi interceptado nos testes e nenhuma mensagem foi enviada.
+- Axe sem violações detectadas nas tags WCAG 2 A/AA e 2.1 AA testadas. O texto pequeno da seção dos passos precisou de um ajuste discreto de contraste em relação ao CSS original. Modal, navegação por teclado, menu mobile e preferência por movimento reduzido foram verificados.
+- QA de produção local em 1440, 390, 768 e 320px: status 200, zero imagens quebradas, zero erros de página e zero overflow. Os quatro relatórios e capturas estão em `artifacts/qa/`. Em rede simulada de 200 KB/s e CPU 4×, o LCP mobile local foi 13,6 s; esse custo resulta da entrega integral do retrato lossless e das fotos solicitadas. É uma medição de laboratório, sem dados de campo.
+- Fotos e dados reais seguem ignorados pelo Git. Indexação segue desligada por padrão. Publicação e liberação de imagens dependem da revisão profissional.
+
+## Histórico da transformação CRO anterior, substituída pela restauração integral
 
 13/10/2026. Estado: **implementação verificada, conteúdo e publicação pendentes de revisão profissional**. Navegador: Microsoft Edge via Playwright. URL local: http://127.0.0.1:3011. Revisão visual com configuração real local; testes automatizados com configuração sintética separada.
 

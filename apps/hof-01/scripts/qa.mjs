@@ -56,12 +56,13 @@ try {
       waitUntil: "networkidle",
     });
     await page.evaluate(() => document.fonts.ready);
+    await page.locator('html[data-site-ready="true"]').waitFor();
     await page.waitForFunction(() => {
-      const image = document.querySelector(".hero-portrait img");
+      const image = document.querySelector(".portrait");
       return image?.complete && image.naturalWidth > 0;
     });
     await page.screenshot({ path: path.join(output, `${name}-hero.png`) });
-    for (const section of await page.locator("main>section").all()) {
+    for (const section of await page.locator("main section").all()) {
       await section.scrollIntoViewIfNeeded();
       await page.waitForTimeout(150);
     }
@@ -74,18 +75,18 @@ try {
       .getByRole("button", { name: "Mostrar detalhes dos lábios" })
       .click();
     await page.waitForFunction(() => {
-      const image = document.querySelector(".case-photo");
+      const image = document.querySelector("#featured-image");
       return image?.complete && image.naturalWidth > 0;
     });
-    await page.locator(".case-open").click();
+    await page.locator("#open-case").click();
     await page.waitForFunction(() => {
-      const image = document.querySelector(".case-dialog>img");
+      const image = document.querySelector("#dialog-image");
       return image?.complete && image.naturalWidth > 0;
     });
     await page.screenshot({ path: path.join(output, `${name}-dialog.png`) });
     await page.keyboard.press("Escape");
     if (name === "mobile") {
-      await page.locator(".case-selection").scrollIntoViewIfNeeded();
+      await page.locator(".case-selector").scrollIntoViewIfNeeded();
       await page.screenshot({ path: path.join(output, "mobile-gallery.png") });
     }
     const metrics = await page.evaluate(() => ({

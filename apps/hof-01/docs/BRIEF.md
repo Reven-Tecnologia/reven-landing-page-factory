@@ -8,7 +8,7 @@ Responsável: Reven. Data: 13/10/2026. Estado: implementação autorizada pelo u
 - Problema: compreender quem atende, quais áreas de cuidado são oferecidas, exemplos reais e como consultar horários.
 - Oferta confirmada: contato por WhatsApp para conversar sobre a avaliação. Preço, duração, disponibilidade, taxas e sala ainda não confirmados.
 - Diferencial observável: identidade profissional, retrato real e seis registros de um mesmo caso. Não há evidência de superioridade clínica ou garantia de resultado.
-- CTA: “Consultar horários pelo WhatsApp”. Destino confirmado no briefing anterior e mantido em configuração privada de checkout.
+- CTA: “Agende sua avaliação”. O usuário pediu a recuperação integral da versão aprovada; o botão abre o WhatsApp com mensagem inicial e a confirmação do horário acontece na conversa. Destino mantido em configuração privada de checkout.
 - Ativos: retrato da profissional e seis imagens de comparações já compostas pelo cliente. Preservar integralmente; sem filtros ou reconstrução com IA. Marfim, champagne e ameixa aprovados pelo usuário.
 - Métrica: clique no CTA seria uma microconversão; agendamento confirmado seria o resultado comercial. Nenhum analytics ou evento externo será conectado nesta rodada.
 - Aprovador visual: usuário. Autorização documental dos pacientes, conselho completo, domínio e conteúdo para publicação: pendentes.

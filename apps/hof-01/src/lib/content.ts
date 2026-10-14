@@ -118,15 +118,16 @@ export const getContent = cache(async (): Promise<ClinicContent | null> => {
 });
 
 export function contactUrl(
-  content: Pick<ClinicContent, "whatsapp">,
+  content: Pick<ClinicContent, "whatsapp" | "name">,
   interest?: string,
 ) {
   const url = new URL(content.whatsapp);
+  const shortName = content.name.split(/\s+/).slice(0, 2).join(" ");
   url.searchParams.set(
     "text",
     interest
-      ? `Olá! Vim pelo site e gostaria de consultar horários para uma avaliação de ${interest}.`
-      : "Olá! Vim pelo site e gostaria de consultar horários e condições da avaliação facial ou corporal.",
+      ? `Olá, ${shortName}! Vim pelo site e gostaria de conversar sobre ${interest}.`
+      : `Olá, ${shortName}! Vim pelo site e gostaria de agendar uma avaliação.`,
   );
   return url.toString();
 }

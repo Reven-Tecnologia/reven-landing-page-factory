@@ -1,6 +1,6 @@
 # HOF-01 — aplicação Next.js independente
 
-Landing de atendimento facial e corporal. Planejamento CRO e alternativas de arte estão em `docs/BRIEF.md` e `docs/PAGE_PLAN.md`. A composição final deriva da direção editorial de consulta. A raiz da factory e sua rota de cliente existente continuam em projetos separados desta aplicação.
+Landing de atendimento facial e corporal. A composição final recupera integralmente a versão anteriormente aprovada pelo usuário; a mudança é para Next.js App Router. O HTML aprovado fica em `src/app/site-template.ts`, o CSS em `src/app/globals.css` e as interações em `public/site-interactions.js`. O servidor Next preenche os dados da cliente a partir de configuração local ou de ambiente. O histórico do plano CRO está em `docs/PAGE_PLAN.md`.
 
 ## Organização e Git
 
@@ -17,7 +17,7 @@ A skill do repositório proíbe dados pessoais versionados. Por isso, código e 
 - Em desenvolvimento, configure `.local-client/content.json` a partir de `docs/content.example.json`. Os campos vazios são lacunas, não informações de publicação.
 - As fotografias autorizadas vão em `public/client-assets/`, ignorado pelo Git. As dimensões e os caminhos devem corresponder ao JSON. Nenhuma fotografia foi retocada ou gerada.
 - `CLIENT_CONTENT_JSON` tem prioridade sobre o arquivo local. Configure esse JSON diretamente no ambiente do projeto Vercel; não coloque dados ou credenciais em mensagens, comandos, .env versionado ou vercel.json.
-- Com deploy via Git, os arquivos ignorados não chegam à Vercel. Use URLs HTTPS aprovadas de um armazenamento/CDN próprio no JSON e configure `CLIENT_ASSET_ORIGIN` com a origem exata para permitir otimização de imagens. O código não depende da hospedagem anterior.
+- Com deploy via Git, os arquivos ignorados não chegam à Vercel. Use URLs HTTPS aprovadas de um armazenamento/CDN próprio no JSON. `CLIENT_ASSET_ORIGIN` pode restringir a origem aceita pela configuração Next; as imagens são entregues sem otimização ou recompressão para preservar os arquivos originais.
 - Alternativamente, o deploy manual por CLI pode enviar os arquivos locais autorizados de `public/client-assets/`. `.vercelignore` define esse pacote e exclui a configuração local: o JSON ainda precisa existir no ambiente do deploy. A presença dos arquivos nesse pacote é publicação e depende de aprovação, não do fato de estarem ignorados pelo Git.
 - Os arquivos `_test/` são sintéticos e servem apenas a testes. Não fazem parte dos assets finais de uma publicação.
 - Sem configuração, a aplicação mostra um rascunho neutro sem CTA externo. Configuração incompleta gera erro explícito de validação; nunca inventa telefone, endereço ou credencial.
