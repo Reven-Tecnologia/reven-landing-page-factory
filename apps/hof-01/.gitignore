@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.local-client/
+public/client-assets/
+artifacts/
+test-results/
+playwright-report/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
