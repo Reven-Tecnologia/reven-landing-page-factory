@@ -2,13 +2,20 @@
 
 Landing de atendimento facial e corporal. A composição final recupera integralmente a versão anteriormente aprovada pelo usuário; a mudança é para Next.js App Router. O HTML aprovado fica em `src/app/site-template.ts`, o CSS em `src/app/globals.css` e as interações em `public/site-interactions.js`. O servidor Next preenche os dados da cliente a partir de configuração local ou de ambiente. O histórico do plano CRO está em `docs/PAGE_PLAN.md`.
 
+## Deploy atual na Vercel
+
+- Projeto: `cesar-brazs-projects/dra-luana-macedo-hof`.
+- Produção: https://dra-luana-macedo-hof.vercel.app/ (pública). Prévia protegida pela autenticação Vercel.
+- Publicação atual feita por CLI a partir deste diretório. O projeto está ligado localmente em `.vercel/`, ignorado pelo Git; `Root Directory` no projeto é `.` para este fluxo.
+- `CLIENT_CONTENT_JSON` está configurado no ambiente de prévia e produção da Vercel; os valores não estão neste repositório.
+- O projeto ainda não tem integração Git: a tentativa de conectar `Reven-Tecnologia/reven-landing-page-factory` foi recusada por falta de acesso da integração GitHub da Vercel. Para deploy automático por push, conceder acesso desse repositório à integração, conectar o projeto, configurar `Root Directory: apps/hof-01` e revisar a branch de produção. A aplicação ainda não está na `main`.
+- O conteúdo está com `noindex` até aprovação de indexação e domínio definitivo. Para publicar manualmente nova versão, executar `npx vercel deploy --prod --scope cesar-brazs-projects` nesta pasta.
+
 ## Organização e Git
 
 Use **diretórios por aplicação**, não branches permanentes por cliente. Este diretório tem package.json, lockfile, configuração Next e testes próprios. A branch `codex/hof-cro-next` serve à revisão das alterações; depois do merge, a aplicação continua em `apps/hof-01`.
 
-Na Vercel, importe o mesmo repositório como um projeto novo e selecione **Root Directory: `apps/hof-01`**, Framework: Next.js, Install Command: `npm ci`, Build Command: `npm run build`. Não há `rootDirectory` em vercel.json. A configuração é feita no painel do projeto. Documentação: https://vercel.com/docs/monorepos, consultada em 13/10/2026.
-
-Nenhum projeto Vercel foi criado ou publicado nesta entrega.
+Quando a integração Git estiver disponível, configure **Root Directory: `apps/hof-01`**, Framework: Next.js, Install Command: `npm ci`, Build Command: `npm run build`. Não há `rootDirectory` em `vercel.json`. Documentação: https://vercel.com/docs/monorepos, consultada em 13/10/2026.
 
 ## Conteúdo e fotografias
 

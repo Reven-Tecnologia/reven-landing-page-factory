@@ -12,6 +12,14 @@ O pedido final foi recuperar a versão anterior inteira e alterar somente a stac
 - QA de produção local em 1440, 390, 768 e 320px: status 200, zero imagens quebradas, zero erros de página e zero overflow. Os quatro relatórios e capturas estão em `artifacts/qa/`. Em rede simulada de 200 KB/s e CPU 4×, o LCP mobile local foi 13,6 s; esse custo resulta da entrega integral do retrato lossless e das fotos solicitadas. É uma medição de laboratório, sem dados de campo.
 - Em 13/10/2026, o usuário autorizou versionar as sete imagens públicas: seis fotos do caso e o retrato. O JSON com contatos segue fora do Git, e a indexação segue desligada por padrão.
 
+## Verificação da produção Vercel — 13/10/2026
+
+Projeto `dra-luana-macedo-hof` em `cesar-brazs-projects`; URL pública https://dra-luana-macedo-hof.vercel.app/. Framework Next.js configurado no projeto. `CLIENT_CONTENT_JSON` foi adicionado como variável criptografada para prévia e produção. A primeira tentativa de deploy retornou 404 no domínio por projeto sem preset de framework; após configurar Next.js e republicar, página e fotos passaram a responder HTTP 200. Produção pública; autenticação Vercel restrita às prévias.
+
+Edge/Playwright na URL hospedada: desktop 1440px e mobile 390px com status 200, oito seções, retrato 1086×1448, seis vistas 1080×1080, mapa no HTML, CTA com destino correto, zero imagens quebradas, zero overflow e zero erros de página. Capturas em `artifacts/qa/vercel-*.png`, ignorado pelo Git. Consulta de logs de runtime no intervalo disponível do plano Hobby: zero erros. A página permanece `noindex, nofollow` por configuração.
+
+O deploy foi feito por CLI com o commit de código `6bcc351`. A conexão automática ao GitHub falhou porque a integração Vercel não possui acesso ao repositório da organização Reven; o fluxo de novas versões permanece manual até essa autorização e a configuração do diretório do monorepo.
+
 ## Histórico da transformação CRO anterior, substituída pela restauração integral
 
 13/10/2026. Estado: **implementação verificada, conteúdo e publicação pendentes de revisão profissional**. Navegador: Microsoft Edge via Playwright. URL local: http://127.0.0.1:3011. Revisão visual com configuração real local; testes automatizados com configuração sintética separada.
