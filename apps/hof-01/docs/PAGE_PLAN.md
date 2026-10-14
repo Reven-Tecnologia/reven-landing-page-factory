@@ -8,6 +8,8 @@ O usuário escolheu recuperar a página anterior inteira e mudar somente a stack
 
 O resultado usa Next.js App Router para página, conteúdo e metadados. O markup aprovado foi convertido em template com campos de identidade, contatos, localização e imagens preenchidos apenas pelo JSON local ou variável de ambiente. O script de interações original foi mantido como asset cliente. A mudança de stack não altera os textos nem a hierarquia visual aprovada. As únicas correções funcionais mantidas dos pedidos seguintes são JPEGs originais, retrato lossless, mapa automático e contraste dos textos pequenos na seção dos passos.
 
+Em 13/10/2026, o usuário autorizou colocar as imagens públicas no Git. As sete imagens usadas agora acompanham o código no diretório da aplicação; o JSON com contatos permanece fora do Git.
+
 CTA principal: “Agende sua avaliação”, abrindo o WhatsApp com mensagem pré-preenchida. O clique inicia a conversa; disponibilidade e agendamento são combinados nela. Publicação, indexação e aprovação dos registros de pacientes permanecem pendentes.
 
 ## Histórico da transformação CRO, substituído pela escolha do usuário

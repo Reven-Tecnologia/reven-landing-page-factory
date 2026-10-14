@@ -23,4 +23,4 @@ Responsável: Reven. Data: 13/10/2026. Estado: implementação autorizada pelo u
 | Retrato e paleta                                         | Materiais e aprovação visual do usuário, 12–13/10                               | Confirmado                                                 |
 | Tempo de experiência, eficácia, preços, horários         | Não há documento                                                                | Não usar como afirmação                                    |
 
-Identidade, contatos, URLs de fontes identificáveis e fotografias ficam em `.local-client/` e `public/client-assets/`, ignorados. Não introduzir esses dados em testes ou documentos versionados.
+O usuário autorizou em 13/10/2026 o versionamento das sete imagens públicas usadas na página. Elas ficam em `public/client-assets/`. Identidade, contatos e URLs de fontes identificáveis permanecem em `.local-client/`, fora do Git; os testes continuam com dados sintéticos.

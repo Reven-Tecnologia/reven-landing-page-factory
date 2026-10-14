@@ -10,7 +10,7 @@ O pedido final foi recuperar a versão anterior inteira e alterar somente a stac
 - O mapa é um iframe presente no HTML e carregado ao aproximar a seção; no Edge local, apareceu com o marcador do endereço. O WhatsApp foi interceptado nos testes e nenhuma mensagem foi enviada.
 - Axe sem violações detectadas nas tags WCAG 2 A/AA e 2.1 AA testadas. O texto pequeno da seção dos passos precisou de um ajuste discreto de contraste em relação ao CSS original. Modal, navegação por teclado, menu mobile e preferência por movimento reduzido foram verificados.
 - QA de produção local em 1440, 390, 768 e 320px: status 200, zero imagens quebradas, zero erros de página e zero overflow. Os quatro relatórios e capturas estão em `artifacts/qa/`. Em rede simulada de 200 KB/s e CPU 4×, o LCP mobile local foi 13,6 s; esse custo resulta da entrega integral do retrato lossless e das fotos solicitadas. É uma medição de laboratório, sem dados de campo.
-- Fotos e dados reais seguem ignorados pelo Git. Indexação segue desligada por padrão. Publicação e liberação de imagens dependem da revisão profissional.
+- Em 13/10/2026, o usuário autorizou versionar as sete imagens públicas: seis fotos do caso e o retrato. O JSON com contatos segue fora do Git, e a indexação segue desligada por padrão.
 
 ## Histórico da transformação CRO anterior, substituída pela restauração integral
 
@@ -75,7 +75,7 @@ Fontes verificadas: Playfair Display e DM Sans, auto-hospedadas por Next Font. Z
 | Conselho completo, sala, condições da avaliação | Precisão do conteúdo para publicação | Confirmar com a profissional       |
 | Permissão documental das imagens                | Autorização de divulgação            | Confirmar com a profissional       |
 | Domínio e indexação                             | Metadados definitivos                | Não configurados                   |
-| Dados/fotos no ambiente de deploy               | Git não envia os arquivos ignorados  | Fluxos descritos no README         |
+| JSON no ambiente de deploy                       | Configuração local não vai pelo Git | Fluxo descrito no README          |
 | Vercel e medições de campo                      | Validação em hospedagem final        | Deploy não solicitado nesta rodada |
 
 Aceite visual anterior do usuário orientou a composição. Esta transformação segue disponível para sua revisão local antes de qualquer publicação.

@@ -12,17 +12,17 @@ Nenhum projeto Vercel foi criado ou publicado nesta entrega.
 
 ## Conteúdo e fotografias
 
-A skill do repositório proíbe dados pessoais versionados. Por isso, código e esquema entram no Git; identidade, contatos, URLs de evidência e fotos de pacientes ficam fora dele.
+O usuário autorizou explicitamente o versionamento das imagens públicas usadas nesta página. Os seis registros do caso e o retrato estão no Git. Identidade, contatos e demais dados da configuração continuam fora dele.
 
 - Em desenvolvimento, configure `.local-client/content.json` a partir de `docs/content.example.json`. Os campos vazios são lacunas, não informações de publicação.
-- As fotografias autorizadas vão em `public/client-assets/`, ignorado pelo Git. As dimensões e os caminhos devem corresponder ao JSON. Nenhuma fotografia foi retocada ou gerada.
+- As sete imagens usadas vão em `public/client-assets/` e são versionadas por uma lista explícita no `.gitignore`. As seis comparações são cópias dos JPEGs fornecidos; o retrato é WebP lossless do PNG fornecido. As dimensões e os caminhos devem corresponder ao JSON.
 - `CLIENT_CONTENT_JSON` tem prioridade sobre o arquivo local. Configure esse JSON diretamente no ambiente do projeto Vercel; não coloque dados ou credenciais em mensagens, comandos, .env versionado ou vercel.json.
-- Com deploy via Git, os arquivos ignorados não chegam à Vercel. Use URLs HTTPS aprovadas de um armazenamento/CDN próprio no JSON. `CLIENT_ASSET_ORIGIN` pode restringir a origem aceita pela configuração Next; as imagens são entregues sem otimização ou recompressão para preservar os arquivos originais.
-- Alternativamente, o deploy manual por CLI pode enviar os arquivos locais autorizados de `public/client-assets/`. `.vercelignore` define esse pacote e exclui a configuração local: o JSON ainda precisa existir no ambiente do deploy. A presença dos arquivos nesse pacote é publicação e depende de aprovação, não do fato de estarem ignorados pelo Git.
+- Com deploy via Git, as sete imagens acompanham o projeto Vercel automaticamente. `CLIENT_ASSET_ORIGIN` só é necessário se o JSON passar a apontar para um armazenamento externo. As imagens são entregues sem otimização ou recompressão para preservar os arquivos originais.
+- `.vercelignore` exclui a configuração local e os arquivos sintéticos de teste. O JSON ainda precisa existir no ambiente do deploy.
 - Os arquivos `_test/` são sintéticos e servem apenas a testes. Não fazem parte dos assets finais de uma publicação.
 - Sem configuração, a aplicação mostra um rascunho neutro sem CTA externo. Configuração incompleta gera erro explícito de validação; nunca inventa telefone, endereço ou credencial.
 
-O checkout desta entrega já contém os arquivos locais da prévia. Em um clone novo, é necessário fornecê-los novamente. A identificação completa do conselho, a sala e a autorização documental das imagens ainda precisam de revisão. A página permanece `noindex` por padrão; indexação requer `indexingApproved: true` e domínio aprovado em `siteUrl`.
+Um clone novo já recebe as sete imagens. A configuração da cliente deve ser fornecida separadamente. A página permanece `noindex` por padrão; indexação requer `indexingApproved: true` e domínio aprovado em `siteUrl`.
 
 ## Rodar e verificar
 
