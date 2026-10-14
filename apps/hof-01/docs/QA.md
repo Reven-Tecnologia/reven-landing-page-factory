@@ -28,7 +28,7 @@
 - [x] Sem botão flutuante sobrepondo controles ou fotografias. Foco visível e rótulos acessíveis.
 - [x] Teste axe de WCAG 2 A/AA e 2.1 AA sem violações detectadas nas configurações testadas. Não equivale a auditoria completa de leitor de tela.
 - [x] Movimento reduzido desliga as animações; conteúdo sempre disponível se o efeito não executar.
-- [x] Mapa não solicita recurso externo antes do clique; carregamento de iframe e destino de rota testados. Rota continua disponível sem carregar o mapa.
+- [x] Mapa automático por lazy loading, sem botão: iframe presente no HTML e carregamento verificado ao navegar até a seção. Rota continua disponível.
 
 ## Gates
 
@@ -39,7 +39,7 @@
 - [x] Fotos, JSON de cliente e capturas reais ignorados pelo Git; testes usam somente dados sintéticos. Nome, telefone e e-mail reais não entram nos arquivos versionados.
 - [x] Metadados por configuração; idioma pt-BR, um h1 e `noindex` por padrão. URL canônica/social definitiva depende de domínio aprovado.
 
-## Desempenho medido em laboratório local
+## Desempenho histórico — antes da prioridade por arquivos originais
 
 Servidor `next start`, browser context novo por viewport. CDP mobile: latência 150 ms, download 200 KB/s e CPU 4×. Fonte e imagens servidas pela aplicação. Cache de otimização do servidor compartilhado entre as execuções; não comparar os tempos como amostras equivalentes de rede real.
 
@@ -50,7 +50,7 @@ Servidor `next start`, browser context novo por viewport. CDP mobile: latência 
 | Tablet 768            | 360 ms    | 0             | 24 ms                     | 415900 bytes                     |
 | Estreito 320          | 1952 ms   | 0             | 16 ms                     | 334190 bytes                     |
 
-Fontes verificadas: Playfair Display e DM Sans, auto-hospedadas por Next Font. Zero imagens quebradas, zero erros de página, mapa não requisitado na abertura. Esses números são medições locais; EventTiming não é INP de campo e não há aprovação de Core Web Vitals em produção. Capturas e JSON completos em `artifacts/qa/`.
+Fontes verificadas: Playfair Display e DM Sans, auto-hospedadas por Next Font. Zero imagens quebradas, zero erros de página, mapa não requisitado na abertura. Após o ajuste de qualidade descrito abaixo, estes números e pesos não caracterizam a versão atual. Esses números são medições locais; EventTiming não é INP de campo e não há aprovação de Core Web Vitals em produção. Capturas e JSON completos em `artifacts/qa/`.
 
 `npm audit --omit=dev`: zero vulnerabilidades reportadas. Audit completo: cinco apontamentos altos na cadeia de ferramentas ESLint → fast-glob → micromatch → braces, incluindo GHSA-vfj7-8cjw-p6xm; não estão nas dependências de produção. A correção automática sugerida faria downgrade incompatível do eslint-config-next, portanto não foi aplicada. Não é justificativa para alterar o framework aprovado nesta transformação.
 
@@ -65,3 +65,9 @@ Fontes verificadas: Playfair Display e DM Sans, auto-hospedadas por Next Font. Z
 | Vercel e medições de campo                      | Validação em hospedagem final        | Deploy não solicitado nesta rodada |
 
 Aceite visual anterior do usuário orientou a composição. Esta transformação segue disponível para sua revisão local antes de qualquer publicação.
+
+## Ajuste de qualidade e mapa — 13/10/2026
+
+Pedido explícito do usuário: máxima qualidade disponível e mapa sem clique. Seis JPEGs copiados byte a byte das fontes de 1080×1080. Retrato: WebP lossless de 1263084 bytes com comparação de pixels RGBA sem diferenças em relação ao PNG de 1086×1448, preservando perfil ICC quando presente. `images.unoptimized: true` desliga a redução e a recompressão pelo Next.js. As seis imagens antigas em WebP já não são referenciadas pelo conteúdo local.
+
+Build, lint e oito testes aprovados após o ajuste; teste do mapa atualizado para exigir iframe já presente, ausência de botão e carregamento após navegar. Verificação de navegador em 1440px confirma arquivos diretos, sem `/_next/image`, sem srcset reduzido, dimensões nativas 1080px para o caso e 1086px para o retrato. Respostas HTTP dos arquivos comparadas byte a byte com os arquivos locais; nenhuma diferença. Capturas: `original-quality.png` e `automatic-map.png` em `artifacts/qa/`. A qualidade prioriza maior volume de download; as métricas históricas acima precisam de nova medição no deploy final.

@@ -101,7 +101,7 @@ try {
       brokenImages: [...document.querySelectorAll("main img")].filter(
         (image) => !image.complete || image.naturalWidth === 0,
       ).length,
-      mapRequestedInitially: performance
+      mapRequestedDuringJourney: performance
         .getEntriesByType("resource")
         .some((resource) => resource.name.includes("google.com/maps")),
       resourceCount: performance.getEntriesByType("resource").length,

@@ -20,7 +20,7 @@
   },
   "views": [
     {
-      "src": "/client-assets/caso-frontal.webp",
+      "src": "/client-assets/caso-frontal.jpg",
       "alt": "",
       "title": "Vista frontal",
       "short": "Frontal",
@@ -28,7 +28,7 @@
       "height": 1080
     },
     {
-      "src": "/client-assets/caso-sorriso.webp",
+      "src": "/client-assets/caso-sorriso.jpg",
       "alt": "",
       "title": "Expressão e sorriso",
       "short": "Sorriso",
@@ -36,7 +36,7 @@
       "height": 1080
     },
     {
-      "src": "/client-assets/caso-perfil.webp",
+      "src": "/client-assets/caso-perfil.jpg",
       "alt": "",
       "title": "Vista de perfil",
       "short": "Perfil",
@@ -44,7 +44,7 @@
       "height": 1080
     },
     {
-      "src": "/client-assets/caso-contorno.webp",
+      "src": "/client-assets/caso-contorno.jpg",
       "alt": "",
       "title": "Contorno e proporções",
       "short": "Contorno",
@@ -52,7 +52,7 @@
       "height": 1080
     },
     {
-      "src": "/client-assets/caso-labios.webp",
+      "src": "/client-assets/caso-labios.jpg",
       "alt": "",
       "title": "Detalhes dos lábios",
       "short": "Lábios",
@@ -60,7 +60,7 @@
       "height": 1080
     },
     {
-      "src": "/client-assets/caso-detalhe.webp",
+      "src": "/client-assets/caso-detalhe.jpg",
       "alt": "",
       "title": "Detalhe lateral",
       "short": "Detalhe",

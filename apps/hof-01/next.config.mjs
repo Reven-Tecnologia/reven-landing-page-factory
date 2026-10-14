@@ -4,7 +4,8 @@ const remotePatterns = origin ? [new URL("/**", origin)] : [];
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   turbopack: { root: process.cwd() },
-  images: { remotePatterns },
+  // Clinical images and portrait are already prepared: deliver their source bytes.
+  images: { remotePatterns, unoptimized: true },
   devIndicators: false,
 };
 export default nextConfig;

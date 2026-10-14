@@ -46,3 +46,7 @@ Escolha: **A, editorial de consulta**, incorporando apenas a precisão de legend
 ## Pendências
 
 Confirmar identificação completa do conselho, autorização de fotos, sala e condições da avaliação; revisar copy com a profissional; aprovar domínio e configuração de conteúdo antes de deploy. Isso não impede a transformação local autorizada.
+
+## Ajuste solicitado — qualidade e mapa
+
+Em 13/10, usuário priorizou qualidade máxima das fotos e mapa automático. Os seis registros passam a usar cópias byte a byte dos JPEGs fornecidos (1080px), e o retrato usa WebP lossless com pixels e perfil de cor preservados do PNG. `images.unoptimized` impede redução de resolução e recompressão pelo Next. O iframe do mapa está presente no HTML e carrega automaticamente ao se aproximar da seção (`loading=lazy`), sem botão ou componente cliente. Aumentar o tamanho entregue das fotos é uma escolha explícita de qualidade desta página.

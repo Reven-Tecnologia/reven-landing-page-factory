@@ -41,3 +41,7 @@ Prévia de produção: http://127.0.0.1:3011. Com o servidor ativo, `npm run qa`
 Os testes usam somente uma configuração sintética no servidor de teste (porta 3012), interceptam o WhatsApp e o mapa e não enviam mensagens. A revisão visual da prévia real é feita separadamente na porta 3011. A configuração sintética não altera o JSON local nem entra no build de produção.
 
 Não foram adicionados analytics, cookies de marketing, formulário, integração com CRM ou publicação automática. Contato abre o WhatsApp; clique não equivale a agendamento.
+
+## Qualidade das imagens e mapa
+
+As seis vistas devem usar os JPEGs originais, sem nova compressão. O retrato local foi convertido do PNG para WebP lossless, com igualdade de pixels verificada. O Next entrega o arquivo original: `images.unoptimized: true`. A galeria, suas miniaturas e o modal usam a mesma fonte completa. Nos arquivos locais desta versão, as vistas usam `.jpg`; o retrato usa `.webp`. O mapa carrega automaticamente por lazy loading, sem exigir clique.

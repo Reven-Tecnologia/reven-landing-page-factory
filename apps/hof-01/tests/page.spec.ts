@@ -95,7 +95,7 @@ test("galeria identifica um caso, troca vistas e mantém foco no modal", async (
   );
 });
 
-test("mapa carrega somente quando solicitado e menu permite navegar", async ({
+test("mapa carrega automaticamente ao navegar e menu permite navegar", async ({
   page,
 }, testInfo) => {
   let requested = false;
@@ -107,7 +107,10 @@ test("mapa carrega somente quando solicitado e menu permite navegar", async ({
     });
   });
   await page.goto("/");
-  expect(requested).toBe(false);
+  await expect(page.locator("iframe")).toHaveCount(1);
+  await expect(page.getByRole("button", { name: "Carregar mapa" })).toHaveCount(
+    0,
+  );
   if (testInfo.project.name === "mobile") {
     await page.getByRole("button", { name: "Menu" }).click();
     await expect(
@@ -119,7 +122,6 @@ test("mapa carrega somente quando solicitado e menu permite navegar", async ({
     .getByRole("link", { name: "Como chegar" })
     .click();
   await expect(page).toHaveURL(/#localizacao$/);
-  await page.getByRole("button", { name: "Carregar mapa" }).click();
   await expect(page.locator("iframe")).toBeVisible();
   await expect(
     page.frameLocator("iframe").getByText("Mapa de teste carregado"),
