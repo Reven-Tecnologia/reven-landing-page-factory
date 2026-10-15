@@ -1,0 +1,72 @@
+{
+  "name": "",
+  "initials": "",
+  "profession": "",
+  "registration": "",
+  "city": "",
+  "addressName": "",
+  "address": "",
+  "whatsapp": "",
+  "email": "",
+  "instagram": "",
+  "mapsEmbed": "",
+  "mapsRoute": "",
+  "methodology": "",
+  "portrait": {
+    "src": "/client-assets/portrait.webp",
+    "alt": "",
+    "width": 1086,
+    "height": 1448
+  },
+  "views": [
+    {
+      "src": "/client-assets/caso-frontal.jpg",
+      "alt": "",
+      "title": "Vista frontal",
+      "short": "Frontal",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/client-assets/caso-sorriso.jpg",
+      "alt": "",
+      "title": "Expressão e sorriso",
+      "short": "Sorriso",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/client-assets/caso-perfil.jpg",
+      "alt": "",
+      "title": "Vista de perfil",
+      "short": "Perfil",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/client-assets/caso-contorno.jpg",
+      "alt": "",
+      "title": "Contorno e proporções",
+      "short": "Contorno",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/client-assets/caso-labios.jpg",
+      "alt": "",
+      "title": "Detalhes dos lábios",
+      "short": "Lábios",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/client-assets/caso-detalhe.jpg",
+      "alt": "",
+      "title": "Detalhe lateral",
+      "short": "Detalhe",
+      "width": 1080,
+      "height": 1080
+    }
+  ],
+  "indexingApproved": false
+}
